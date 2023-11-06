@@ -1,0 +1,16 @@
+<nav class="custom-navbar">
+  <div class="logo">
+    <a routerLink="/" class="navbar-link">My Logo</a>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/home" class="navbar-link">Home</a>
+    <a routerLink="/news" class="navbar-link">News</a>
+    <a routerLink="/about" class="navbar-link">About</a>
+    <a routerLink="/profile" class="navbar-link">Profile</a>
+  </div>
+  <div class="nav-auth">
+    <button routerLink="/login" class="login-btn" *ngIf="!loggedIn">Log In</button>
+    <button routerLink="/signup" class="signup-btn" *ngIf="!loggedIn">Sign Up</button>
+    <button routerLink="/home" class="logout-btn" (click)="logout()" *ngIf="loggedIn">Log Out</button>
+  </div>
+</nav>
